@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 //一覧表示ページ
-Route::get('/show', 'showapisController@show')->name('show');
+Route::get('/show', 'ShowapisController@show')->name('show');
 
 
 
