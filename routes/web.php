@@ -11,9 +11,15 @@
 |
 */
 
+//トップページ（登録ページ）
 Route::get('/', function () {
-    return view('welcome');
+    return view('toppage/regist');
 });
+
+//一覧表示ページ
+Route::get('/show', 'showapisController@show')->name('show');
+
+
 
 Auth::routes();
 
