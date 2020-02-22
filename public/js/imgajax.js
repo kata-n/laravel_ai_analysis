@@ -10,9 +10,9 @@ $(function()
         type:"POST",
         url: "postpath", //Controller@postpath
         data: {"image_path":$('#path1').val()},
-        success: function(hoge) //Controller@postpathの処理を受取る
+        success: function(imgok) //Controller@postpathの処理を受取
         {
-          alert(hoge);
+          alert(imgok);
         },
         error: function(XMLHttpRequest,textStatus,errorThrown)
         {

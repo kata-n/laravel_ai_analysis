@@ -13,17 +13,19 @@ class RegistapisController extends Controller
     {
       $image_path=Input::get('image_path'); //imgajax.jsから値を受け取る
 
+      //image_pathのパス名の末数字の数からクラス分けを行います
+      //imgajax.jsにレスポンスを返す
       if($image_path==1){
-        return Response::make('平成元年です！'); // heisei.jsに値を返す
+        return Response::make('クラス1です');
       }
       else if($image_path<=0){
-        return Response::make('その年は平成じゃないですよ！'); // heisei.jsに値を返す
+        return Response::make('クラス2です');
       }
       else if($image_path>=29){
-        return Response::make('未来のことはわからないです……。'); //heisei.jeに値を返す
+        return Response::make('クラス3です');
       }
       else{
-        return Response::make('平成'.$heisei.'年です！'); //imgajax.jsに値を返す
+        return Response::make('どれにも当てはまりません');
       }
     }
 }
