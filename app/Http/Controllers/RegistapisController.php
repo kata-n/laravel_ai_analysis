@@ -16,16 +16,38 @@ class RegistapisController extends Controller
       //image_pathのパス名の末数字の数からクラス分けを行います
       //imgajax.jsにレスポンスを返す
       if($image_path==1){
-        return Response::make('クラス1です');
+        $array = array(
+          "success" => "true" ,
+          "message" => "success" ,
+          "estimated_data" => array(
+              "class" => 1 ,
+              "confidence" => 0.8888 ,
+          ),
+        );
+        $json = json_encode( $array , JSON_PRETTY_PRINT );
+        return \Response::json($json);
       }
-      else if($image_path<=0){
-        return Response::make('クラス2です');
-      }
-      else if($image_path>=29){
-        return Response::make('クラス3です');
+      else if($image_path==2){
+        $array = array(
+          "success" => "true" ,
+          "message" => "success" ,
+          "estimated_data" => array(
+              "class" => 2 ,
+              "confidence" => 0.8585 ,
+          ),
+        );
+        $json = json_encode( $array , JSON_PRETTY_PRINT );
+        return \Response::json($json);
       }
       else{
-        return Response::make('どれにも当てはまりません');
+        $array = array(
+          "success" => "false" ,
+          "message" => "Error:E50012" ,
+          "estimated_data" => array(
+          ),
+        );
+        $json = json_encode( $array , JSON_PRETTY_PRINT );
+        return \Response::json($json);
       }
     }
 }
