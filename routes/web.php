@@ -13,18 +13,15 @@
 
 //トップページ
 Route::get('/', function () {
-    return view('toppage/top');
+  return view('toppage/top');
 });
 
 //登録ページ
 Route::get('/regist', 'ShowapisController@regist')->name('regist');
-Route::post('/postpath','RegistapisController@postpath');
-
+//APIへ送信
+Route::post('postpath','RegistapisController@postpath');
 //一覧表示ページ
 Route::get('/show', 'ShowapisController@show')->name('show');
-
-
-
+//認証
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
