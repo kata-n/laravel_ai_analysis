@@ -14,4 +14,10 @@ class ShowapisController extends Controller
     $lists = Apitest::all();
     return view('toppage/show',compact('lists'));
   }
+
+  //登録画面
+  public function regist()
+  {
+    return view('toppage/regist');
+  }
 }

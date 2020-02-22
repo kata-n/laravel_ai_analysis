@@ -11,10 +11,14 @@
 |
 */
 
-//トップページ（登録ページ）
+//トップページ
 Route::get('/', function () {
-    return view('toppage/regist');
+    return view('toppage/top');
 });
+
+//登録ページ
+Route::get('/regist', 'ShowapisController@regist')->name('regist');
+Route::post('/postpath','RegistapisController@postpath');
 
 //一覧表示ページ
 Route::get('/show', 'ShowapisController@show')->name('show');

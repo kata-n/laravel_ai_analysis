@@ -47,6 +47,7 @@
       </div>
     </div>
 
-      <a href="{{ url('/') }}">登録画面へ</a>
+      <a href="{{ url('/regist') }}">登録画面へ</a>
+      <a href="{{ url('/') }}">topへ</a>
   </section>
 @endsection
