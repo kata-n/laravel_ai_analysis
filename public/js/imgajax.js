@@ -2,6 +2,8 @@ $(function()
 {
   $('#pathsend').click(function()
   {
+    var img_path = $("#path1").val();
+    $(".img_path").val(img_path);
     $.ajaxSetup({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     });

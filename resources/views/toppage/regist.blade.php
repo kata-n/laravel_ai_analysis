@@ -13,20 +13,32 @@
     <div class="top-main">
       <input type="text" id="path1">
       <input type="submit" id="pathsend" class="btn btn-success" value="APIへ送信">
-      <a href="{{ url('/show') }}">登録したデータ一覧</a>
-      <a href="{{ url('/') }}">トップページ</a>
     </div>
     <div class="regist__result">
       <p>API送信結果</p>
       <form method="post" action="{{ route('dbsend') }}" enctype="multipart/form-data" class="form">
         @csrf
-        <input type="text" class="status" name="status">
-        <input type="text" class="details" name="details">
-        <input type="text" class="classification" name="classification">
-        <input type="text" class="confidence" name="confidence">
+
+        <input type="text" class="img_path" name="img_path" hidden>
+        <lavel name="status">ステータス
+          <input type="text" class="status" name="status">
+        </lavel>
+        <lavel name="details">詳細
+          <input type="text" class="details" name="details">
+        </lavel>
+        <lavel name="classification">分類（クラス）
+          <input type="text" class="classification" name="classification">
+        </lavel>
+        <lavel nale="confidence">信頼度
+          <input type="text" class="confidence" name="confidence">
+        </lavel>
 
         <button type="submit" class="btn btn-primary btn-large">DBへ登録</button>
       </form>
+    </div>
+    <div class="regist__footer">
+      <a href="{{ url('/show') }}">登録したデータ一覧</a>
+      <a href="{{ url('/') }}">トップページ</a>
     </div>
   </section>
 

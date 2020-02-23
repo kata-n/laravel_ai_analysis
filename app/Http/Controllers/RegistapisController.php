@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
-use App\Apitest;
 use Response; // return Response::make()を使用する
 use Input; // Input::get()を使用する
 
@@ -51,26 +49,5 @@ class RegistapisController extends Controller
       $json = json_encode( $array , JSON_PRETTY_PRINT );
       return \Response::json($json);
     }
-  }
-
-  //DBへ登録
-  public function create(Request $request)
-  {
-//    //バリデーション
-//    $request->validate([
-//      'image_path' => 'required|string|max:255',
-//      'success' => 'required|string|max:255',
-//      'message' => 'required|string|max:255',
-//    ]);
-
-    $registApi = new Apitest;
-    $registApi->image_path = $request->image_path;
-    $registApi->success = $request->status;
-    $registApi->message = $request->details;
-    $registApi->class = $request->classification;
-    $registApi->confidence = $request->confidence;
-
-    $registApi->save();
-    return redirect('/')->with('flash_message','登録しました');
   }
 }
