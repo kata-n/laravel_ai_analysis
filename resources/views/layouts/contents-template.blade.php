@@ -12,7 +12,7 @@
   <body>
     <header>
     @section('header')
-    <!--ヘッダー（共通部分）-->
+      <a href="{{ url('/') }}">API技術テスト</a>
     @show
     </header>
 

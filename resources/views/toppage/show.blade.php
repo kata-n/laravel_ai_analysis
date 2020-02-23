@@ -2,11 +2,6 @@
 
 @section('title','一覧画面')
 
-@section('header')
-  @parent
-  <p>API技術テスト</p>
-@endsection
-
 @section('content')
   <p>一覧表示ページ</p>
   <section class="top">
@@ -47,7 +42,6 @@
       </div>
     </div>
 
-      <a href="{{ url('/regist') }}">登録画面へ</a>
-      <a href="{{ url('/') }}">topへ</a>
+      <a  class="btn btn-outline-primary" role="button" href="{{ url('/regist') }}">登録画面へ</a>
   </section>
 @endsection

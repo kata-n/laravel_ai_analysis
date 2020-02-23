@@ -2,11 +2,6 @@
 
 @section('title','登録画面')
 
-@section('header')
-  @parent
-  <p>API技術テスト</p>
-@endsection
-
 @section('content')
   <section class="regist__input">
     <p>登録ページ</p>
@@ -37,8 +32,7 @@
       </form>
     </div>
     <div class="regist__footer">
-      <a href="{{ url('/show') }}">登録したデータ一覧</a>
-      <a href="{{ url('/') }}">トップページ</a>
+      <a class="btn btn-outline-primary" role="button" href="{{ url('/show') }}">登録したデータ一覧</a>
     </div>
   </section>
 

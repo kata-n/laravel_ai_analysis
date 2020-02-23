@@ -2,11 +2,6 @@
 
 @section('title','登録画面')
 
-@section('header')
-  @parent
-  <p>API技術テスト</p>
-@endsection
-
 @if (session('flash_message'))
   <!--フラッシュメッセージ-->
   <div class="alert alert-primary text-center" role="alert">
