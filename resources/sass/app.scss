@@ -6,3 +6,83 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// ==============================
+// 変数定義
+// ==============================
+//余白
+$space_s: 0.3rem;
+$space_m: 1rem;
+$space_l: 1.5rem;
+$space_xl: 2.0rem;
+//文字サイズ
+$font-size_20px: 20px;
+$font-size_18px: 18px;
+
+// ==============================
+// 共通部分
+// ==============================
+// header
+header {
+  width: 100%;
+  padding: $space_l;
+  border-bottom: 1px solid #b1b0b0;
+}
+
+.heading{
+  font-size: $font-size_20px;
+}
+
+.title{
+  font-size: $font-size_18px;
+}
+
+.container{
+  margin-top: $space_l;
+}
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: $space_m;
+  border-top: 1px solid #b1b0b0;
+}
+// ==============================
+// トップページ
+// ==============================
+.top__main{
+  margin: 0 auto;
+  a{
+    margin: $space_m;
+  }
+}
+// ==============================
+// 登録ページ
+// ==============================
+.regist{
+  p{
+    margin-bottom: 0;
+    padding: 0;
+  }
+  &__imgurl{
+    input{
+      width: 30%;
+      display: block;
+      margin-bottom: $space_s;
+    }
+    border-bottom: 1px solid #b1b0b0;
+  }
+  &__form{
+    input{
+      display: block;
+      margin-bottom: $space_m;
+      padding: $space_s;
+    }
+  }
+  &__result{
+    margin-top: $space_m;
+  }
+  &__footer{
+    margin-bottom: $space_xl;
+  }
+}

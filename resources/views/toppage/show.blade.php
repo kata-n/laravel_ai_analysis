@@ -1,9 +1,10 @@
 @extends('layouts.contents-template')
 
-@section('title','一覧画面')
+@section('title','一覧表示画面')
 
 @section('content')
-  <p>一覧表示ページ</p>
+  <h2 class="heading">登録したデータの一覧です</h2>
+  <a class="btn btn-outline-primary" role="button" href="{{ url('/regist') }}">登録画面へ</a>
   <section class="top">
     <div class="container p-mypage">
       @if(count($lists)!= 0)
@@ -41,7 +42,5 @@
         @endif
       </div>
     </div>
-
-      <a  class="btn btn-outline-primary" role="button" href="{{ url('/regist') }}">登録画面へ</a>
   </section>
 @endsection

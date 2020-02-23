@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Apitest;
 
-class InsertDBapisCpmtroller extends Controller
+class InsertDBapisController extends Controller
 {
   //DBへ登録
   public function create(Request $request)

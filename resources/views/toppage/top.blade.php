@@ -1,6 +1,6 @@
 @extends('layouts.contents-template')
 
-@section('title','登録画面')
+@section('title','トップページ')
 
 @if (session('flash_message'))
   <!--フラッシュメッセージ-->
@@ -11,10 +11,9 @@
 
 @section('content')
   <section class="top">
-    <div class="top-main">
-      <div>トップページ</div>
-      <a href="{{ url('/show') }}">登録したデータ一覧</a>
-      <a href="{{ url('/regist') }}">登録する</a>
+    <div class="top__main">
+      <a class="btn btn-outline-primary" role="button" href="{{ url('/regist') }}">登録する</a>
+      <a class="btn btn-outline-primary" role="button" href="{{ url('/show') }}">登録したデータ一覧</a>
     </div>
   </section>
 @endsection

@@ -11,6 +11,7 @@ $(function()
       {
         type:"POST",
         url: "postpath", //Controller@postpath
+//        url: "http://example.com/"
         data: {"image_path":$('#path1').val()},
         success: function(json) //Controller@postpathの処理を受取
         {

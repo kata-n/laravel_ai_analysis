@@ -3,15 +3,16 @@
 @section('title','登録画面')
 
 @section('content')
-  <section class="regist__input">
-    <p>登録ページ</p>
-    <div class="top-main">
+  <section class="regist">
+    <h2 class="heading">登録ページ</h2>
+    <p>画像URLを入力して下さい</p>
+    <div class="regist__imgurl">
       <input type="text" id="path1">
       <input type="submit" id="pathsend" class="btn btn-success" value="APIへ送信">
     </div>
     <div class="regist__result">
-      <p>API送信結果</p>
-      <form method="post" action="{{ route('dbsend') }}" enctype="multipart/form-data" class="form">
+      <h3 class="title">API送信結果</h3>
+      <form method="post" action="{{ route('dbsend') }}" enctype="multipart/form-data" class="regist__form">
         @csrf
 
         <input type="text" class="img_path" name="img_path" hidden>
