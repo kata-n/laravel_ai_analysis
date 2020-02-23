@@ -7,6 +7,13 @@
   <p>API技術テスト</p>
 @endsection
 
+@if (session('flash_message'))
+  <!--フラッシュメッセージ-->
+  <div class="alert alert-primary text-center" role="alert">
+    {{ session('flash_message') }}
+  </div>
+@endif
+
 @section('content')
   <section class="top">
     <div class="top-main">

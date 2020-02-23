@@ -20,8 +20,8 @@ Route::get('/', function () {
 Route::get('/regist', 'ShowapisController@regist')->name('regist');
 //APIへ送信
 Route::post('postpath','RegistapisController@postpath');
+//DBへ登録
+Route::post('/regist','RegistapisController@create')->name('dbsend');
 //一覧表示ページ
 Route::get('/show', 'ShowapisController@show')->name('show');
-//認証
-Auth::routes();
 

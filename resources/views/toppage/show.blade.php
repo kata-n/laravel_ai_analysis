@@ -20,7 +20,7 @@
               <th style="width:400px">{{ __('画像パス') }}</th>
               <th style="width:180px">{{ __('ステータス') }}</th>
               <th style="width:80px">{{ __('詳細') }}</th>
-              <th style="width:150px">{{ __('クラス') }}</th>
+              <th style="width:150px">{{ __('分類(クラス)') }}</th>
               <th style="width:80px">{{ __('信頼度') }}</th>
               <th style="width:80px">{{ __('送信日') }}</th>
               <th style="width:80px">{{ __('応答日') }}</th>

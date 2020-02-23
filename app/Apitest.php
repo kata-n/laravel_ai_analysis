@@ -12,4 +12,7 @@ class Apitest extends Model
   protected $primaryKey = 'id';
   //変更しない
   protected $guarded = ['id'];
+
+  const CREATED_AT = 'request_timestamp';
+  const UPDATED_AT = 'response_timestamp';
 }

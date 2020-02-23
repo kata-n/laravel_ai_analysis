@@ -17,11 +17,13 @@
     </header>
 
     <div class="container">
-      <!--コンテンツ（共通部分）-->
-      @yield('content')
+    <!--コンテンツ（共通部分）-->
+    @yield('content')
     </div>
+
+    <!--フッター（共通部分）-->
     <footer>
-      Copyright© <a href="{{ url('/login')}}">kata</a>
+      Copyright©kawamura
     </footer>
   </body>
 </html>

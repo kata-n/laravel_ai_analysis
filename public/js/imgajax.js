@@ -10,13 +10,18 @@ $(function()
         type:"POST",
         url: "postpath", //Controller@postpath
         data: {"image_path":$('#path1').val()},
-        success: function(imgok) //Controller@postpathの処理を受取
+        success: function(json) //Controller@postpathの処理を受取
         {
-          alert(imgok);
+          alert(json);//Json形式である事を明示
+          json = JSON.parse( json );
+          $('.status').val(json["success"]);
+          $('.details').val(json["message"]);
+          $('.classification').val(json["estimated_data"]["class"]);
+          $('.confidence').val(json["estimated_data"]["confidence"]);
         },
         error: function(XMLHttpRequest,textStatus,errorThrown)
         {
-          console.log('error!!');
+          console.log('error!!'); //Ajax通信失敗
         }
       });
     return false;
