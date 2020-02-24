@@ -16,18 +16,19 @@
         @csrf
 
         <input type="text" class="img_path" name="img_path" hidden>
-        <lavel name="status">ステータス
-          <input type="text" class="status" name="status">
-        </lavel>
-        <lavel name="details">詳細
-          <input type="text" class="details" name="details">
-        </lavel>
-        <lavel name="classification">分類（クラス）
-          <input type="text" class="classification" name="classification">
-        </lavel>
-        <lavel nale="confidence">信頼度
-          <input type="text" class="confidence" name="confidence">
-        </lavel>
+
+        <lavel name="status">ステータス</lavel>
+        <div class="error">{{ $errors->first('status') }}</div>
+        <input type="text" class="status" name="status" readonly>
+
+        <lavel name="details">詳細</lavel>
+        <div class="error">{{ $errors->first('details') }}</div>
+        <input type="text" class="details" name="details" readonly>
+
+        <lavel name="classification">分類（クラス）</lavel>
+        <input type="text" class="classification" name="classification" readonly>
+        <lavel nale="confidence">信頼度</lavel>
+        <input type="text" class="confidence" name="confidence" readonly>
 
         <button type="submit" class="btn btn-primary btn-large">DBへ登録</button>
       </form>
