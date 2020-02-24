@@ -10935,7 +10935,8 @@ header {
 }
 
 .regist__imgurl input {
-  width: 30%;
+  width: 40%;
+  padding: 0.3rem;
   display: block;
   margin-bottom: 0.3rem;
 }

@@ -23,7 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
     <footer class="footer">
-      Copyright©kawamura
+      Test taker：kawamura
     </footer>
   </body>
 </html>

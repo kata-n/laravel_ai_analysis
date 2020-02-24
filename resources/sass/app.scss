@@ -75,7 +75,8 @@ header {
   }
   &__imgurl{
     input{
-      width: 30%;
+      width: 40%;
+      padding: $space_s;
       display: block;
       margin-bottom: $space_s;
     }

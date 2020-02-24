@@ -5,7 +5,7 @@
 @section('content')
   <section class="regist">
     <h2 class="heading">登録ページ</h2>
-    <p>画像URLを入力して下さい</p>
+    <p>画像URLを入力して下さい（.jpgのみ）</p>
     <div class="regist__imgurl">
       <input type="text" id="path1">
       <input type="submit" id="pathsend" class="btn btn-success" value="APIへ送信">

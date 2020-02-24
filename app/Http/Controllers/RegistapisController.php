@@ -11,31 +11,25 @@ class RegistapisController extends Controller
 {
   public function postpath()
   {
-    $image_path=Input::get('image_path'); //imgajax.jsから値を受け取る
+    //imgajax.jsから値を受け取る
+    $image_path=Input::get('image_path');
 
-    //image_pathのパス名の末数字の数からクラス分けを行います
-    //imgajax.jsにレスポンスを返す
-    if($image_path==1){
+    //jpgの文字が入っているか判定
+    if(strpos($image_path,'jpg') !== false){
+      //分類（クラス）と信頼度はランダムで出力するものとします。
+      $rndclass = rand(1,4);
+      $rndconfidence =  round( mt_rand() / mt_getrandmax() * 1, 3);
+
+      //配列化
       $array = array(
         "success" => "true" ,
         "message" => "success" ,
         "estimated_data" => array(
-            "class" => 1 ,
-            "confidence" => 0.8888 ,
+            "class" => $rndclass ,
+            "confidence" => $rndconfidence ,
         ),
       );
-      $json = json_encode( $array , JSON_PRETTY_PRINT );
-      return \Response::json($json);
-    }
-    else if($image_path==2){
-      $array = array(
-        "success" => "true" ,
-        "message" => "success" ,
-        "estimated_data" => array(
-            "class" => 2 ,
-            "confidence" => 0.8585 ,
-        ),
-      );
+      //JSON形式にエンコード、returnしてimgajax.jsにレスポンスを返す
       $json = json_encode( $array , JSON_PRETTY_PRINT );
       return \Response::json($json);
     }
