@@ -13,6 +13,15 @@ class Apitest extends Model
   //変更しない
   protected $guarded = ['id'];
 
+  //UnixTimestamp
+  protected $dateFormat = 'U';
+
+  //デフォルトのカラム名を使わない
   const CREATED_AT = 'request_timestamp';
   const UPDATED_AT = 'response_timestamp';
+  protected $dates = [
+    'request_timestamp',
+    'response_timestamp',
+  ];
+
 }
