@@ -3,18 +3,14 @@
 laravel 5.8.35
 
 ## ディレクトリ構成
-├── app 
-│   ├── Console
-│   ├── Exceptions
-│   ├── Http
-│   │   ├── Controllers #コントローラ 
-│   │   │    ├── InsertDBapisController.php
-│   │   │    ├── RegistapisController.php
-│   │   │    └── ShowapisController.php
-│   │   ├── Kernel.php
-│   │   └── Middleware
-│   ├── Providers
-│   └── Apitest.php #モデル
+#コントローラ 
+InsertDBapisController.php
+RegistapisController.php
+ShowapisController.php
+
+#モデル
+Apitest.php
+
 ├── artisan
 ├── bootstrap
 │   ├── app.php
